@@ -12,11 +12,30 @@
         }
 
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #333;
             color: #fff;
             padding: 20px;
-            text-align: center;
         }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header button {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
 
         nav {
             background-color: #f1f1f1;
@@ -44,12 +63,36 @@
             padding: 20px;
         }
 
+        section ul li {
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            width: 1500px !important;
+            height: auto !important;
+            padding: 10px;
+            position: relative;
+        }
+
         footer {
             background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
 
         .project {
             margin-bottom: 20px;
@@ -67,21 +110,17 @@
         .project p {
             color: #777;
         }
+        
+        .notice-section, .board-section {
+            width: 50%;
+        }
 
-        .blog-post {
+        .notice, .board {
             margin-bottom: 20px;
+            border: 1px solid #ccc;
             padding: 10px;
             background-color: #f9f9f9;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-post h3 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        .blog-post p {
-            color: #777;
         }
     </style>
 </head>
@@ -89,6 +128,7 @@
 <body>
     <header>
         <h1 style="font-size: 36px;">동아리명</h1>
+        <button type="button">로그인/회원가입</button>
     </header>
 
     <nav>
@@ -96,12 +136,15 @@
             <li><a href="#" style="font-weight: bold;">홈</a></li>
             <li><a href="#">소개</a></li>
             <li><a href="#">게시판</a></li>
-            <li><a href="#">소통함</a></li>
+            <li><a href="#">자료실</a></li>
             <li><a href="#">마이페이지</a></li>
         </ul>
     </nav>
 
     <main>
+        <section>
+            <img src="sample.png">
+        </section>
         <section>
             <h2 style="color: #555;">최신 글</h2>
             <div class="project">
@@ -114,6 +157,30 @@
                 <p>글 2에 대한 설명 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed dictum arcu.</p>
             </div>
         </section>
+        <div class="container">
+            <section class="notice-section">
+                <h2 style="color: #555;">공지사항</h2>
+                <div class="notice">
+                    <ul>
+                        <li><a href="#">공지사항 1</a></li>
+                        <li><a href="#">공지사항 2</a></li>
+                        <li><a href="#">공지사항 3</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="board-section">
+                <h2 style="color: #555;">게시판</h2>
+                <div class="board">
+                    <ul>
+                        <li><a href="#">게시글 1</a></li>
+                        <li><a href="#">게시글 2</a></li>
+                        <li><a href="#">게시글 3</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <footer>
